@@ -20,8 +20,8 @@ def main():
     with open('referat.txt', 'r', encoding='utf-8') as fr:
         file_read = fr.read()
     print(f"Длина всего исходного файла: {len(file_read)}")
-    sum_words = file_read.replace(',', '')
-    sum_words = len(sum_words.replace('.', '').split())
+    sum_words = file_read.replace(',', ' ')
+    sum_words = len(sum_words.replace('.', ' ').split())
     print(f"Всего слов в файле: {sum_words}")
     file_read = file_read.replace('.', '!')
     print(file_read)
